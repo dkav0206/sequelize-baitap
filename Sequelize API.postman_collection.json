@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "e8d971f2-201c-442a-b738-7c1a0d5b302b",
+		"name": "Sequelize API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25715973"
+	},
+	"item": [
+		{
+			"name": "Like",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Unlike",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"res_id\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/unlikeRes/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"unlikeRes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLikeAsUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/getLike/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"getLike",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLikeAsRes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/res/getLike/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"getLike",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rateRes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRateAsUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/user/getRate/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"getRate",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRateAsRes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/res/getRate/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"getRate",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"food_id\":2,\r\n    \"amount\":2,\r\n    \"code\":\"\",\r\n    \"arr_sub_id\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/order/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"order",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "localhost:8080/api",
+			"type": "string"
+		}
+	]
+}
